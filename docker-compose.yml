@@ -13,5 +13,7 @@ services:
       - node-app
     ports:
       - "${PORT:-80}:80"
+    ports:
+      - "${PORT:-443}:443"
     restart: always
     command: traefik --configfile=/config/traefik.toml
